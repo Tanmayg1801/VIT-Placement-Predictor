@@ -21,14 +21,13 @@ You need the following libraries installed:
 
 ### Data Requirements
 
-The input DataFrame (`df`) must contain the following columns:
-
-| Column Name | Data Type |
+| Column Name | Data Type | Description |
 | :--- | :--- | :--- |
-| **Placement got** | Integer (0 or 1)|
-| **CGPA** | Float/Numeric |
-| **VIT Branch** | String/Object |
-| **Subject Branch** | String/Object |
+| **Placement got** | Integer/Boolean | The target variable (e.g., 1 for placed, 0 for not placed). |
+| **CGPA** | Float/Numeric | The student's Cumulative Grade Point Average. |
+| **VIT Branch** | String/Object | The branch/department associated with the student's VIT degree. |
+| **Subject Branch** | String/Object | The specific subject/specialization branch. |
+
 
 ## 🧠 Model Architecture & Processing
 
@@ -61,15 +60,15 @@ The processed features are concatenated and fed into a series of fully connected
 
 ### Training Configuration
 
-| Parameter | Value |
+| Parameter | Value | Description |
 | :--- | :--- | :--- |
-| **Optimizer** | `tf.keras.optimizers.Adam` |
-| **Learning Rate** | `0.0005` |
-| **Loss Function** | `binary_crossentropy` |
-| **Metrics** | `accuracy` |
-| **Epochs** | `10` |
-| **Batch Size** | `256` |
-| **Validation Split**| `0.1` |
+| **Optimizer** | `tf.keras.optimizers.Adam` | Efficient gradient descent optimization. |
+| **Learning Rate** | `0.0005` | A small rate for stable training. |
+| **Loss Function** | `binary_crossentropy` | Standard for binary classification. |
+| **Metrics** | `accuracy` | Tracks the correct prediction rate. |
+| **Epochs** | `10` | The number of times the model sees the entire training set. |
+| **Batch Size** | `256` | Number of samples processed before updating weights. |
+| **Validation Split**| `0.1` | 10% of the training data used for internal validation during training. |
 
 ### Evaluation Output
 
