@@ -24,6 +24,7 @@ You need the following libraries installed:
 The input DataFrame (`df`) must contain the following columns:
 
 | Column Name | Data Type |
+| :--- | :--- | :--- |
 | **Placement got** | Integer (0 or 1)|
 | **CGPA** | Float/Numeric |
 | **VIT Branch** | String/Object |
@@ -61,6 +62,7 @@ The processed features are concatenated and fed into a series of fully connected
 ### Training Configuration
 
 | Parameter | Value |
+| :--- | :--- | :--- |
 | **Optimizer** | `tf.keras.optimizers.Adam` |
 | **Learning Rate** | `0.0005` |
 | **Loss Function** | `binary_crossentropy` |
